@@ -36,7 +36,7 @@ data "vsphere_virtual_machine" "template" {
 
 # Virtual Machine (จาก template)
 resource "vsphere_virtual_machine" "vm" {
-  name             = "testterraform01"
+  name             = "testterraform01000"
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.ds.id
 
@@ -73,3 +73,4 @@ resource "vsphere_virtual_machine" "vm" {
     thin_provisioned = true
   }
 }
+
